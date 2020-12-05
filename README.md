@@ -1,2 +1,5 @@
 # homer-dashboard
-Config of my personal omer dashboard
+Config of my personal homer dashboard
+
+
+
