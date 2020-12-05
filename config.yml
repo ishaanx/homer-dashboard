@@ -1,0 +1,210 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/icons for icons options
+
+title: "Dashboard"
+subtitle: "Zeus Server"
+#logo: "assets/icons/youravatar.png"
+columns: "4"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: false
+
+
+# Optionnal theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#2E3440"
+    highlight-secondary: "#4C566A"
+    highlight-hover: "#81A1C1"
+    background: "#3B4252"
+    card-background: "#2E3440"
+    text: "#D8DEE9"
+    text-header: "#D8DEE9"
+    text-title: "#81A1C1"
+    text-subtitle: "#81A1C1"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link-hover: "#BF616A"
+
+# colors from Nord theme: https://github.com/arcticicestudio/nord
+
+# Optional message
+# message:
+  #url: https://b4bz.io
+  # style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  # title: "👋 Demo!"
+  # content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "/r/all"
+    icon: "fab fa-reddit-square"
+    url: "https://reddit.com/r/all"
+
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:   
+
+#### Media ####
+  - name: "Media"
+    icon: "fas fa-film"
+    items:
+      - name: "Airsonic"
+        logo: "assets/icons/airsonic.png"
+        tag: "media"
+        url: "https://music.home.server/media/"
+        target: "_blank"
+      - name: "Jellyfin"
+        logo: "assets/icons/jellyfin.png"
+        tag: "media"
+        url: "http://media.home.server/web/index.html"
+        target: "_blank"
+      - name: "Plex"
+        logo: "assets/icons/plex.png"
+        tag: "media"
+        url: "http://10.0.0.241:32400/web/index.html"
+        target: "_blank"
+      #- name: "Tautulli"
+      #  logo: "assets/icons/tautulli.png"
+      #  tag: "media"
+      #  url: "http://172.72.22.10:8181/"
+      #  target: "_blank"
+      - name: "Mango"
+        logo: "assets/icons/mango.png"
+        tag: "media"
+        url: "https://manga.home.server"
+        target: "_blank"
+      - name: "PhotoPrism"
+        logo: "assets/icons/photoprism.png"
+        tag: "media"
+        url: "http://photos.home.server/"
+        target: "_blank"        
+
+
+#### Cloud ####
+  - name: "Cloud"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Bitwarden"
+        logo: "assets/icons/bitwarden.png"
+        # subtitle: "Bookmark example"
+        tag: "cloud"
+        url: "https://bitwarden.home.server"
+        target: "_blank" # optionnal html tag
+      - name: "Nextcloud"
+        logo: "assets/icons/nextcloud.png"
+        tag: "cloud"
+        url: "https://files.home.server"
+        target: "_blank"
+      - name: "DigitalOcean Admin"
+        logo: "assets/icons/digitalocean.png"
+        tag: "cloud"
+        url: "https://cloud.digitalocean.com/projects"
+        target: "_blank"
+
+#### Download ####
+  - name: "Download"
+    icon: "fas fa-download"
+    items:
+      #- name: "Deemix"
+      #  logo: "assets/icons/deemix2.png"
+      #  tag: "download"
+      #  url: "http://172.72.22.10:6595/"
+      #  target: "_blank"
+      #- name: "pyLoad"
+      #  logo: "assets/icons/pyload.png"  
+      #  tag: "download"
+      #  url: "http://172.72.22.10:7999/"
+      #  target: "_blank"
+      - name: "qBittorrent"
+        logo: "/assets/icons/qbittorrent.png"
+        tag: "download"
+        url: "https://torrent.home.server"
+        target: "_blank"
+      #- name: "youtube-dl"
+      #  logo: "assets/icons/youtube-dl.png"     
+      #  tag: "download"
+      #  url: "http://172.72.22.10:17442/"
+
+#### indexers #####      
+  - name: "Indexers"
+    icon: "fas fa-list"
+    items: 
+      - name: "Jackett"
+        logo: "assets/icons/jackett.png"
+        tag: "indexers"
+        url: "https://jackett.home.server/UI/Dashboard"
+        target: "_blank"
+      - name: "Sonarr"
+        logo: "assets/icons/sonarr.png"
+        tag: "indexers"
+        url: "https://sonarr.home.server/"
+        target: "_blank"
+#### Management ####
+  - name: "Management"
+    icon: "fas fa-door-open"
+    items: 
+      - name: "Pi-Hole"
+        subtitle: "Network-wide Ad Blocking"
+        type: "PiHole"
+        logo: "assets/icons/pihole.png"
+        tag: "management"
+        url: "http://10.0.0.81/admin/"
+        target: "_blank"
+
+#### Monitoring ####
+  - name: "Monitoring"
+    icon: "fas fa-desktop"
+    items:  
+      - name: "cAdvisor"
+        logo: "assets/icons/cadvisor.png"
+        tag: "monitoring"
+        url: "https://cadvisor.home.server/containers/"
+        target: "_blank"
+      - name: "Grafana"
+        logo: "assets/icons/grafana.png"
+        tag: "monitoring"
+        url: "http://10.0.0.241:3000/?orgId=1"
+        target: "_blank"
+      - name: "Prometheus"
+        logo: "assets/icons/prometheus.png"
+        tag: "monitoring"
+        url: "http://10.0.0.241:9090/graph"
+        target: "_blank"
+#### Tools ####
+  - name: "Tools"
+    icon: "fas fa-tools"
+    items:   
+      - name: "Filebot"
+        logo: "assets/icons/filebot1.png"
+        tag: "tools"
+        url: "https://filebot.home.server/"
+        target: "_blank"
+      - name: "Portainer"
+        logo: "assets/icons/portainer.png"
+        tag: "tools"
+        url: "https://docker.home.server/#/auth"
+        target: "_blank"
+      - name: "Vscode"
+        logo: "assets/icons/vscode.png"
+        tag: "tools"
+        url: "https://code.home.server/login?to=%2F"
+        target: "_blank"
+        
